@@ -13,7 +13,6 @@ SAVEHIST=10000
 export EDITOR="vim"
 export PAGER=less
 export LESS='-giXRMS'
-export PATH="$HOME/.local/bin:$PATH"
 
 # === aliases ===
 alias ls='ls -F --color=auto'

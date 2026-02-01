@@ -6,5 +6,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 # https://pixi.carapace.sh
 mise use -g carapace@latest
 
-ln -fs ~/dotfiles/.zshrc ~/.zshrc
+echo "" >> ~/.zshrc
+echo "# Load dotfiles configuration" >> ~/.zshrc
+echo "source ~/dotfiles/.zshrc" >> ~/.zshrc
 source ~/.zshrc
