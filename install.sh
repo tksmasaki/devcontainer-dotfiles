@@ -7,6 +7,7 @@ bash -c "$(curl --fail --show-error --silent --location https://raw.githubuserco
 # https://pixi.carapace.sh
 mise use -g carapace@latest
 
+cp $(pwd)/.p10k.zsh ~/.p10k.zsh
 ln -sf $(pwd)/.zshrc ~/.zshrc
 source ~/.zshrc
 zinit self-update
