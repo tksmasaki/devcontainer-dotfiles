@@ -1,7 +1,7 @@
 #!/bin/bash
 
 chsh -s /bin/zsh
-export SHELL=/bin/zsh
+export SHELL="/bin/zsh"
 
 # https://github.com/zsh-users/zsh-autosuggestions
 mkdir -p ~/.zsh
