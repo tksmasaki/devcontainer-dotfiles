@@ -3,7 +3,7 @@
 echo "Setting up zsh environment..."
 
 # https://github.com/zdharma-continuum/zinit
-bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+yes "n" | bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 # https://pixi.carapace.sh
 mise use -g carapace@latest
 
