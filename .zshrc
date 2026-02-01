@@ -13,6 +13,7 @@ SAVEHIST=10000
 export EDITOR="vim"
 export PAGER=less
 export LESS='-giXRMS'
+export PATH="$HOME/.local/bin:$PATH"
 
 # === aliases ===
 alias ls='ls -F --color=auto'
@@ -44,3 +45,11 @@ alias gs='git status'
 alias gsw='git switch'
 alias gswc='git switch -c'
 # === end aliases ===
+
+# https://github.com/zsh-users/zsh-autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# https://pixi.carapace.sh
+autoload -U compinit && compinit
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
