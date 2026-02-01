@@ -1,5 +1,8 @@
 #!/bin/bash
 
+chsh -s /bin/zsh
+export SHELL=/bin/zsh
+
 # https://github.com/zsh-users/zsh-autosuggestions
 mkdir -p ~/.zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
