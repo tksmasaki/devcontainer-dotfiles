@@ -14,6 +14,10 @@ export EDITOR="vim"
 export PAGER=less
 export LESS='-giXRMS'
 
+# ============================== version manager
+mise activate zsh
+# ============================== End version manager
+
 # ============================== Zinit
 # https://github.com/zdharma-continuum/zinit
 ### Added by Zinit's installer
