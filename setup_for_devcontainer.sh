@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-echo "Setting up zsh environment..."
+echo "Setup zsh environment for devcontainer"
 
 # https://github.com/zdharma-continuum/zinit
 yes "n" | bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
@@ -12,4 +12,4 @@ ln -sf $(pwd)/.zshrc ~/.zshrc
 source ~/.zshrc
 zinit self-update
 
-echo "zsh environment setup complete."
+echo "zsh environment setup completed"
