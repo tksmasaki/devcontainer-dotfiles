@@ -78,6 +78,10 @@ alias mkdir='mkdir -p'
 alias grep='grep --color=auto'
 alias sudo='sudo '
 alias sz='source ~/.zshrc'
+alias viz='vi ~/.zshrc'
+alias cz='code ~/.zshrc'
+alias vigc='vi ~/.gitconfig'
+alias cgc='code ~/.gitconfig'
 # git
 alias g='git'
 alias gb='git branch -vv'
@@ -96,4 +100,20 @@ alias gpusf='git push --force-with-lease'
 alias gs='git status'
 alias gsw='git switch'
 alias gswc='git switch -c'
+# ruby
+alias gemclean='gem uninstall -I -a -x --user-install --force'
+alias be='bundle exec'
+alias bi='bundle install'
+# act
+alias aj='act -j'
+alias al='act --list'
+# docker
+alias dit='docker exec -it'
+# VSCode: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+alias c='code'
+alias cn='code -n'
+alias cr='code -r'
 # ============================== End aliases
+
+# Load ~/local/.zshrc if it exists
+[ -f ~/local/.zshrc ] && source ~/local/.zshrc
