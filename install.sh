@@ -3,6 +3,19 @@ set -e
 set -o pipefail
 echo "Execute install.sh"
 
+# Parse command line options
+LOCAL_SETUP=false
+while [[ "$#" -gt 0 ]]; do
+  case $1 in
+    "--local")
+			LOCAL_SETUP=true ;;
+    *)
+			echo "Unknown option: $1";
+			exit 1 ;;
+  esac
+  shift
+done
+
 # Create symbolic links to dotfiles in home directory
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ln -sf "$SCRIPT_DIR/powerlevel10k/.p10k.zsh" ~/.p10k.zsh
@@ -25,14 +38,6 @@ else
 	echo "Zinit is already installed"
 fi
 
-# https://github.com/github/copilot-cli
-if ! command -v copilot > /dev/null 2>&1; then
-	echo "Install GitHub Copilot CLI"
-	curl -fsSL https://gh.io/copilot-install | bash
-else
-	echo "GitHub Copilot CLI is already installed"
-fi
-
 # Allow .zshrc errors (some tools may not be set up yet)
 set +e
 source ~/.zshrc
@@ -43,5 +48,11 @@ zinit self-update
 
 echo "Run mise install"
 mise install
+
+# Run local setup if --local option was specified
+if [ "$LOCAL_SETUP" = true ]; then
+  echo "Running local setup..."
+  "$SCRIPT_DIR/setup_for_local.sh"
+fi
 
 echo "install.sh execution completed"
