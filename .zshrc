@@ -16,7 +16,7 @@ export LESS='-giXRMS'
 
 # ============================== version manager
 # https://mise.jdx.dev
-eval "$(mise activate zsh)"
+eval "$(~/.local/bin/mise activate zsh)"
 # search tools in https://mise-versions.jdx.dev
 # ============================== End version manager
 
