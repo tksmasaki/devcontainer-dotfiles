@@ -46,6 +46,7 @@ set -e
 echo "Compile Zinit"
 zinit self-update
 
+mise trust ~/dotfiles/mise.toml
 echo "Run mise install"
 mise install
 
