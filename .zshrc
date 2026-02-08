@@ -1,4 +1,5 @@
 bindkey -e
+setopt auto_cd
 setopt auto_pushd
 setopt hist_ignore_dups
 setopt ignoreeof
@@ -6,7 +7,7 @@ setopt noclobber
 setopt pushd_ignore_dups
 setopt share_history
 HISTFILE=~/.zsh_history
-HISTORY_IGNORE="(l[sla]|lla|pwd|history)"
+HISTORY_IGNORE="(l[sla]|lla|pwd|history|ps)"
 HISTSIZE=10000
 SAVEHIST=10000
 
@@ -81,6 +82,7 @@ alias cp='cp -i'
 alias cpr='cp -ir'
 alias mv='mv -i'
 alias rm='rm -i'
+alias ln='ln -i'
 alias mkdir='mkdir -p'
 alias grep='grep --color=auto'
 alias sudo='sudo '
