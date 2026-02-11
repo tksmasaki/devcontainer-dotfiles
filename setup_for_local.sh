@@ -3,6 +3,10 @@ set -e
 set -o pipefail
 echo "Execute setup_for_local.sh"
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+mkdir -p ~/.config/ghostty
+ln -sf "$SCRIPT_DIR/ghostty/config" ~/.config/ghostty/config
+
 # https://github.com/github/copilot-cli
 if ! command -v copilot > /dev/null 2>&1; then
 	echo "Install GitHub Copilot CLI"

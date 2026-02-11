@@ -18,9 +18,11 @@ done
 
 # Create symbolic links to dotfiles in home directory
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-ln -sf "$SCRIPT_DIR/powerlevel10k/.p10k.zsh" ~/.p10k.zsh
+mkdir -p ~/.config/mise
+ln -sf "$SCRIPT_DIR/mise/config.toml" ~/.config/mise/config.toml
 ln -sf "$SCRIPT_DIR/.zshrc" ~/.zshrc
 ln -sf "$SCRIPT_DIR/.vimrc" ~/.vimrc
+ln -sf "$SCRIPT_DIR/powerlevel10k/.p10k.zsh" ~/.p10k.zsh
 
 # https://mise.jdx.dev
 if ! command -v mise > /dev/null 2>&1; then
@@ -31,7 +33,7 @@ else
 fi
 
 echo "Trust mise configuration"
-mise trust ~/dotfiles/mise.toml
+mise trust ~/.config/mise/config.toml
 echo "Source .zshrc"
 # Allow .zshrc errors (some tools may not be set up yet)
 set +e
