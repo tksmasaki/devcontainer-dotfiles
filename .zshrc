@@ -123,7 +123,9 @@ alias dit='docker exec -it'
 alias c='code'
 alias cn='code -n'
 alias cr='code -r'
+# devcontainer
+alias dcz='devcontainer exec --remote-env TERM=xterm-256color zsh'
 # ============================== End aliases
 
 # Load ~/local/.zshrc if it exists
-[ -f ~/local/.zshrc ] && source ~/local/.zshrc
+[[ -f ~/local/.zshrc ]] && source ~/local/.zshrc

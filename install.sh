@@ -42,7 +42,7 @@ echo "Run mise install"
 mise install
 
 # https://github.com/zdharma-continuum/zinit
-if [ ! -d "$HOME/.local/share/zinit/zinit.git" ]; then
+if [[ ! -d "$HOME/.local/share/zinit/zinit.git" ]]; then
 	echo "Install Zinit"
 	yes "n" | bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 else
@@ -59,7 +59,7 @@ echo "Compile Zinit"
 zinit self-update
 
 # Run local setup if --local option was specified
-if [ "$LOCAL_SETUP" = true ]; then
+if [[ "$LOCAL_SETUP" = true ]]; then
   echo "Running local setup..."
   "$SCRIPT_DIR/setup_for_local.sh"
 fi
