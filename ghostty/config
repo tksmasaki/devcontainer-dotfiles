@@ -2,6 +2,7 @@
 background-opacity = 0.75
 font-family = "HackGen Console NF"
 font-size = 14
-theme = "GitHub Dark Dimmed"
+theme = "Iceberg Dark"
+# theme = "GitHub Dark Dimmed"
 window-inherit-working-directory = true
 window-save-state = always
