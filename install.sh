@@ -20,9 +20,12 @@ done
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ln -sf "$SCRIPT_DIR/zsh/.zshrc" ~/.zshrc
 ln -sf "$SCRIPT_DIR/vim/.vimrc" ~/.vimrc
-ln -sf "$SCRIPT_DIR/git/.gitmessage.txt" ~/.gitmessage.txt
-mkdir -p ~/.config
 ln -sf "$SCRIPT_DIR/powerlevel10k/.p10k.zsh" ~/.p10k.zsh
+mkdir -p ~/.config
+mkdir -p ~/.config/git
+ln -sf "$SCRIPT_DIR/git/config" ~/.config/git/config
+ln -sf "$SCRIPT_DIR/git/ignore" ~/.config/git/ignore
+ln -sf "$SCRIPT_DIR/git/.gitmessage.txt" ~/.config/git/.gitmessage.txt
 mkdir -p ~/.config/nvim
 ln -sf "$SCRIPT_DIR/nvim/init.vim" ~/.config/nvim/init.vim
 mkdir -p ~/.config/mise
