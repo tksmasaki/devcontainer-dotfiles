@@ -1,3 +1,5 @@
 local/
 stashes/
 mise/mise.local.toml
+# migrate to nvim
+vim/

@@ -23,6 +23,8 @@ ln -sf "$SCRIPT_DIR/vim/.vimrc" ~/.vimrc
 ln -sf "$SCRIPT_DIR/git/.gitmessage.txt" ~/.gitmessage.txt
 mkdir -p ~/.config
 ln -sf "$SCRIPT_DIR/powerlevel10k/.p10k.zsh" ~/.p10k.zsh
+mkdir -p ~/.config/nvim
+ln -sf "$SCRIPT_DIR/nvim/init.vim" ~/.config/nvim/init.vim
 mkdir -p ~/.config/mise
 ln -sf "$SCRIPT_DIR/mise/config.toml" ~/.config/mise/config.toml
 mkdir -p ~/.config/sheldon
